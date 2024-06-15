@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+var n, p int
+func pot(x int, n int) int {
+    if n == 0 {
+        return 1
+    }
+     return x * pot(x, n-1)
+    
+}
+
+func main() {
+    fmt.Scan(&n, &p)
+	fmt.Println(pot(n,p))
+}
