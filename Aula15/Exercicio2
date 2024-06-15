@@ -1,0 +1,22 @@
+package main
+import "fmt"
+var n = [5] int {2, 3, 4, 5, 6}
+
+func soma(n []int) int {
+    
+if len(n) ==0 {
+    
+ return 0   
+ 
+}
+     return n[0] + soma(n[1:]) 
+    
+}
+
+
+func main() {
+ 
+    resultado := soma(n[:])
+    
+	fmt.Println(resultado)
+}
