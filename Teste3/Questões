@@ -1,0 +1,76 @@
+Questão 1
+
+package main
+
+import "fmt"
+
+func main() {
+    caracteres := make([]rune, 0, 499)
+
+    fmt.Println("Digite caracter por caracter da frase, entre as palavras coloque um _ para separar as palavras. Digite # para terminar.")
+
+    var caracter rune
+    for i := 0; i < 499; i++ {
+        fmt.Scanf("%c", &caracter)
+        if caracter == '#' {
+            break
+        }
+        caracteres = append(caracteres, caracter)
+    }
+
+    fmt.Print("Frase invertida: ")
+    for i := len(caracteres) - 1; i >= 0; i-- {
+        fmt.Printf("%c", caracteres[i])
+    }
+    fmt.Println()
+}
+
+Questão 2
+ package main
+
+import ( 
+"fmt" 
+"sort"
+)
+
+func main() {
+        var N int
+        fmt.Scanln(&N)
+        for i:=0; i < N; i++ { 
+        fmt.Scanln(&tam)
+        vetor := make([]int, tam)
+        for j :=0; j < tam; j++ {
+         fmt.Scan(&vetor[j])
+        }
+        sort.Ints(vetor[i])
+        fmt.Scanln(vetor[i])
+}
+}
+
+Questão 3
+
+package main
+
+import (
+    "fmt"
+    "sort"
+)
+
+func main() {
+    var N int
+
+    fmt.Println("Digite o tamanho do vetor desejado:")
+    fmt.Scanln(&N)
+
+    vetor := make([]int, N)
+
+    fmt.Println("Digite os elementos do vetor separados por espaços:")
+
+    for i := 0; i < N; i++ {
+        fmt.Scanln(&vetor[i])
+    }
+
+    sort.Ints(vetor)
+
+    fmt.Println(vetor)
+}
